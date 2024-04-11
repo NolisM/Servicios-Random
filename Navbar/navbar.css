@@ -1,0 +1,58 @@
+section {
+    display: flex;
+    flex-direction: row;
+    background-image: url("./image/fondoNavB.jpg");
+    width: 100%;
+    margin: 0%;
+}
+
+p {
+    background-color: #e39b2e;
+    border-radius: 50%;
+    border: 1px solid black;
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 2%;
+}
+
+h1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: black;
+}
+
+a {
+    margin: 2%;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.container-logo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 2%;
+}
+
+.logo {
+    width: 20%;
+    border-radius: 50%;
+    /* background-color: white; */
+
+}
+
+.section {
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    margin: 2%;
+    font-size: medium;
+    width: 100%;
+    color: black;
+    margin-top: 2%;
+
+}
