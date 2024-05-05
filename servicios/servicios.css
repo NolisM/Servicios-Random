@@ -1,0 +1,141 @@
+.place {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid #3369e7;
+    padding: 2%;
+    background-color: #050f2c;
+    color: white;
+    transition: transform 0.2s ease;
+}
+
+.element:hover {
+    transform: scale(1.05);
+}
+
+@media only screen and (max-width: 768px) {
+    .place {
+        grid-template-columns: repeat(2, 1fr);
+
+        padding: 15px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .place {
+        grid-template-columns: 1fr;
+
+        padding: 10px;
+    }
+}
+
+
+.sectionButton {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.add-button {
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: #3369e7;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.add-button:hover {
+    background-color: #0056b3;
+
+}
+
+.titleContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #212121;
+}
+
+.titleHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #050f2c;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Color de fondo semi-transparente */
+    z-index: 1000;
+    /* Z-index alto para que esté por encima del contenido */
+}
+
+.formulario {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 5%;
+    color: #050f2c;
+}
+
+.formElements {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #050f2c;
+}
+
+/* Estilo para ocultar el botón de cerrar */
+#cerrarFormulario {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: red;
+    border-radius: 50%;
+}
+
+.buttonSubmit {
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #3369e7;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 5%;
+
+}
+
+.buttonSubmit:hover {
+    background-color: #0056b3;
+
+}
