@@ -1,0 +1,42 @@
+
+/* Estilos para el contenido dentro del main */
+main {
+    padding: 50px 0;
+}
+
+section {
+    margin-bottom: 2%;
+}
+
+h2 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Estilos específicos para cada sección */
+#quienes-somos {
+    background-color: #f9f9f9;
+    padding: 30px;
+}
+
+#nuestra-mision {
+    background-color: #eef3f6;
+    padding: 30px;
+}
+
+#nuestra-vision {
+    background-color: #f2f8f7;
+    padding: 30px;
+}
+
+#nuestro-equipo {
+    background-color: #f6f2ed;
+    padding: 30px;
+}
