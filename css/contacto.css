@@ -3,6 +3,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url('../image/contacto.jpg');
+    background-size: cover;
+    /* Para que la imagen cubra todo el fondo */
+    background-position: center;
+    /* Para centrar la imagen en el fondo */
+    /* Opcional: otros estilos para el fondo */
 }
 
 .contactpage {
@@ -23,6 +29,7 @@ body {
     /* margin-top: 10%; */
     padding-bottom: 2%;
     padding-top: 2%;
+    margin-bottom: 2%;
 }
 
 .btn-submit {
