@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/contacto.css">
+    <link rel="stylesheet" href="../css/footer.css">
+</head>
+
+<body>
+    <h2>¡Nos encantaría saber de ti!</h2>
+
+    <h4>
+        ¿Tienes alguna pregunta sobre nuestros destinos turísticos, servicios o paquetes de viaje? ¿Necesitas ayuda para
+        planificar tu próxima aventura? ¡No dudes en ponerte en contacto con nosotros!<br />
+
+        Completa el formulario a continuación y nos pondremos en contacto contigo lo antes posible. Tu opinión es
+        importante para nosotros y estamos aquí para ayudarte a hacer realidad tus sueños de viaje.<br />
+
+        ¡Gracias por elegirnos como tu socio en tus viajes y aventuras!
+    </h4>
+
+    <form class="contactpage">
+        <div class="item">
+            <label name='nombre' className='form-Label'>Nombre</label>
+            <input type='text' name='nombre' id='nombre' required />
+        </div>
+        <div class="item">
+            <label name='apellido' className='form-Label'>Apellido</label>
+            <input type='text' name='apellido' id='apellido' required />
+        </div>
+        <div class="item">
+            <label name='email' className='form-Label'>E-mail</label>
+            <input type='email' name='email' id='email' required />
+        </div>
+        <div class="item">
+            <label name='phone' className='form-Label'>Telefono</label>
+            <input type='text' name="phone" id='phone' placeholder='+54(351)3899755' />
+        </div>
+        <div class="item">
+            <label name='mensaje' className='form-Label'>Mensaje</label>
+            <textarea class="textarea" name='mensaje' required></textarea>
+        </div>
+        <div>
+            <button type='submit' class="btn-submit">Enviar</button>
+
+        </div>
+    </form>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contacto</h3>
+                <p><strong>Teléfono:</strong> +123456789</p>
+                <p><strong>Email:</strong> info@tuempresa.com</p>
+                <p><strong>Dirección:</strong> Calle Principal #123, Ciudad, País</p>
+            </div>
+            <div class="social-links">
+                <h3>Síguenos</h3>
+                <ul class="social-links">
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+
+            </div>
+            <p>&copy; 2024 Tourfy. Todos los derechos reservados.</p>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

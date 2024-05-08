@@ -1,29 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Página de Inicio</title>
-    <link rel="stylesheet" href="./css/navbar.css"> 
-    <link rel="stylesheet" href="./css/footer.css"> 
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/footer.css">
 
 </head>
+
 <body>
 
-    <!-- Navbar -->
-    <header>
-        <iframe src="./sitio/Navbar.html" frameborder="0" width="100%" height="400px"></iframe>
-    </header>
-    
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="./image/logo.jpg" alt="Logo de la empresa">
+            </div>
+            <ul class="nav-links">
+                <li><a id="enlace-inicio" href="#">Inicio</a></li>
+                <li><a id="enlace-destinos" href="#">Destinos</a></li>
+                <li><a id="enlace-sobre-nosotros" href="#">Sobre Nosotros</a></li>
+                <li><a id="contacto" href="#">contacto</a></li>
+
+
+            </ul>
+            <button class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
     <!-- Contenido de tu página -->
-    <main>
+    <main id="main-content" class="main-content">
 
     </main>
-    
-    
-    <!-- Footer -->
-    <footer>
-        <iframe src="./sitio/footer.html" frameborder="0" width="50%" height="200px"></iframe>
-    </footer>
+
+
+    <script src="./js/index.js"></script>
 </body>
+
 </html>
