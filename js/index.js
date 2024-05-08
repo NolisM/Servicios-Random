@@ -36,5 +36,10 @@ document.addEventListener("DOMContentLoaded", function () {
         cargarContenido('./sitio/about.html');
     });
 
+    const contacto = document.getElementById('contacto');
+    contacto.addEventListener('click', function (event) {
+        event.preventDefault();
+        cargarContenido('./sitio/form_contacto.html');
+    });
 
 });
