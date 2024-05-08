@@ -1,63 +1,97 @@
 /* Estilos para el footer */
 footer {
-    background-color: #222; /* Color de fondo */
-    color: #fff; /* Color del texto */
-    padding: 50px 0; /* Espaciado interno */
-    text-align: center; /* Alineación del texto */
-    font-family: 'Roboto', sans-serif; /* Fuente de texto */
+    background-color: #222;
+    /* Color de fondo */
+    color: #fff;
+    /* Color del texto */
+    /* padding: 50px 0; */
+    /* Espaciado interno */
+    text-align: center;
+    /* Alineación del texto */
+    font-family: 'Roboto', sans-serif;
+    /* Fuente de texto */
+    margin: 0%;
 }
 
 .footer-content {
-    max-width: 1200px; /* Ancho máximo del contenido */
-    margin: 0 auto; /* Centrar el contenido horizontalmente */
+    /* max-width: 1200px; */
+    /* Ancho máximo del contenido */
+    /* margin: 0 auto; */
+    /* Centrar el contenido horizontalmente */
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: space-between;
 }
 
-.contact-info, .social-links, .copyright {
+.contact-info,
+.social-links,
+.copyright {
     flex: 1;
-    text-align: left; /* Alinear el texto a la izquierda */
-    padding: 0 20px; /* Espaciado interno */
+    text-align: left;
+    /* Alinear el texto a la izquierda */
+    padding: 0 20px;
+    /* Espaciado interno */
 }
 
-.contact-info h3, .social-links h3 {
-    color: #fff; /* Color del título */
-    font-size: 20px; /* Tamaño del título */
-    margin-bottom: 10px; /* Espaciado inferior del título */
+.contact-info h3,
+.social-links h3 {
+    color: #fff;
+    /* Color del título */
+    font-size: 20px;
+    /* Tamaño del título */
+    margin-bottom: 10px;
+    /* Espaciado inferior del título */
 }
 
-.contact-info p, .social-links ul, .copyright {
-    color: #ccc; /* Color del texto */
-    font-size: 16px; /* Tamaño del texto */
-    line-height: 1.6; /* Altura de línea */
+.contact-info p,
+.social-links ul,
+.copyright {
+    color: #ccc;
+    /* Color del texto */
+    font-size: 16px;
+    /* Tamaño del texto */
+    line-height: 1.6;
+    /* Altura de línea */
 }
 
 .social-links ul {
-    list-style: none; /* Eliminar viñetas de la lista */
-    padding: 0; /* Eliminar el espacio interior de la lista */
+    list-style: none;
+    /* Eliminar viñetas de la lista */
+    padding: 0;
+    /* Eliminar el espacio interior de la lista */
 }
 
 .social-links ul li {
-    display: inline-block; /* Mostrar los elementos de la lista en línea */
-    margin-right: 10px; /* Espaciado derecho entre elementos */
+    display: inline-block;
+    /* Mostrar los elementos de la lista en línea */
+    margin-right: 10px;
+    /* Espaciado derecho entre elementos */
 }
 
 .social-links ul li a img {
-    width: 40px; /* Ancho de las imágenes */
-    height: 40px; /* Altura de las imágenes */
-    border-radius: 50%; /* Forma circular */
+    width: 40px;
+    /* Ancho de las imágenes */
+    height: 40px;
+    /* Altura de las imágenes */
+    border-radius: 50%;
+    /* Forma circular */
 }
 
 /* Estilos para dispositivos móviles */
 @media screen and (max-width: 768px) {
     .footer-content {
-        flex-direction: column; /* Cambiar a una columna en dispositivos móviles */
-        align-items: center; /* Centrar el contenido */
+        flex-direction: column;
+        /* Cambiar a una columna en dispositivos móviles */
+        align-items: center;
+        /* Centrar el contenido */
     }
 
-    .contact-info, .social-links, .copyright {
-        text-align: center; /* Alinear el texto al centro en dispositivos móviles */
-        margin-bottom: 20px; /* Espaciado inferior entre secciones */
+    .contact-info,
+    .social-links,
+    .copyright {
+        text-align: center;
+        /* Alinear el texto al centro en dispositivos móviles */
+        margin-bottom: 20px;
+        /* Espaciado inferior entre secciones */
     }
 }

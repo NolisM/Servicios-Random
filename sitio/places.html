@@ -4,25 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="servicios.css">
-    <title>Nuestros Servicios</title>
+    <link rel="stylesheet" href="../css/places.css">
+    <title>Lugares donde ir</title>
 </head>
 
 <body>
-    <header>
-        <h1 class="titleHeader">Nuestros Servicios</h1>
-    </header>
-    <!-- <nav>
-        
-    </nav> -->
     <main>
         <section>
             <section class="sectionButton">
                 <div id="formulario-overlay" class="overlay">
                     <div id="formulario" class="formulario">
-                        <h2>Añade tu servicio</h2>
+                        <h2>Agrega tu sitio</h2>
                         <form id="agregarProductoForm" class="formElements">
-                            <label for="nameService">Nombre del servicio:</label>
+                            <label for="nameService">Nombre del Lugar:</label>
                             <input type="text" id="nameService" name="nameService">
                             <label for="adressService">Direccion:</label>
                             <input type="text" id="adressService" name="adressService">
@@ -33,22 +27,21 @@
                                 alt="Cerrar formulario"></button>
                     </div>
                 </div>
-                <h2>Añadir tu servicio</h2>
+                <h2>Añadir un lugar</h2>
                 <button class="add-button" id="mostrarForm">Añadir</button>
 
             </section>
             <section>
-                <h2 class="titleContainer">Servicios Disponibles</h2>
+                <h2 class="titleContainer">Lugares donde visitar</h2>
                 <container id='results-container' class="place"></container>
             </section>
         </section>
 
 
     </main>
-    <footer>
-        <p>&copy; 2024 Mi Empresa. Todos los derechos reservados.</p>
-    </footer>
-    <script src="servicos.js"></script>
+    <footer> <iframe src="../sitio/footer.html" frameborder="0" width="100%" height="25%"></iframe></footer>
+
+    <script src="../js/places.js"></script>
 </body>
 
 </html>
