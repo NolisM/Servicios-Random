@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/places.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <title>Lugares donde ir</title>
+</head>
+
+<body>
+    <main>
+        <section>
+            <section class="sectionButton">
+                <div id="formulario-overlay" class="overlay">
+                    <div id="formulario" class="formulario">
+                        <h2>Agrega tu sitio</h2>
+                        <form id="agregarProductoForm" class="formElements">
+                            <label for="nameService">Nombre del Lugar:</label>
+                            <input type="text" id="nameService" name="nameService">
+                            <label for="adressService">Direccion:</label>
+                            <input type="text" id="adressService" name="adressService">
+                            <button type="submit" class="buttonSubmit">Agregar</button>
+                        </form>
+
+                        <button id="cerrarFormulario" class="closeButton"><img src="./close.png"
+                                alt="Cerrar formulario"></button>
+                    </div>
+                </div>
+                <h2>Añadir un lugar</h2>
+                <button class="add-button" id="mostrarForm">Añadir</button>
+
+            </section>
+            <section>
+                <h2 class="titleContainer">Lugares donde visitar</h2>
+                <container id='results-container' class="place"></container>
+            </section>
+        </section>
+
+
+    </main>
+    <!-- <footer> <iframe src="../sitio/footer.html" frameborder="0" width="100%" height="25%"></iframe></footer> -->
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contacto</h3>
+                <p><strong>Teléfono:</strong> +123456789</p>
+                <p><strong>Email:</strong> info@tuempresa.com</p>
+                <p><strong>Dirección:</strong> Calle Principal #123, Ciudad, País</p>
+            </div>
+            <div class="social-links">
+                <h3>Síguenos</h3>
+                <ul class="social-links">
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+
+            </div>
+            <p>&copy; 2024 Tourfy. Todos los derechos reservados.</p>
+        </div>
+
+    </footer>
+
+    <script src="../js/places.js"></script>
+</body>
+
+</html>

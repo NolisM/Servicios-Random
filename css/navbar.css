@@ -1,7 +1,9 @@
-/* Colores de la paleta */
 :root {
-  --primary-color: #0a1b27; /* Color principal */
-  --secondary-color: #315d7d;; /* Color secundario */
+  --primary-color: #0a1b27;
+  /* Color principal */
+  --secondary-color: #315d7d;
+  ;
+  /* Color secundario */
 }
 
 /* Estilos del navbar */
