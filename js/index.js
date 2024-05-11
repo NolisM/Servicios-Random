@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const enlaceInicio = document.getElementById('enlace-inicio');
     enlaceInicio.addEventListener('click', function (event) {
         event.preventDefault();
-        cargarContenido('./index.html');
+        cargarContenido('./sitio/inicio.html');
     });
 
     // Detectar clic en el enlace "Destinos"
