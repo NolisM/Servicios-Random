@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const mainContent = document.getElementById('main-content');
     // Cargar contenido inicial
-
+    cargarContenido('./sitio/inicio.html')
 
     // Función para cargar contenido dinámicamente
     function cargarContenido(pagina) {

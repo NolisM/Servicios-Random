@@ -39,9 +39,24 @@ document.addEventListener("DOMContentLoaded", function () {
     fetchPlaces();
 
     function fetchPlaces() {
-        fetch(apiUrl, options)
+        const loadingGif = document.getElementById("loading-gif");
+        loadingGif.style.display = "block"; // Muestra el GIF de carga
+        const latitude = -31.4167; // Latitud de Córdoba, Argentina
+        const longitude = -64.1833; // Longitud de Córdoba, Argentina
+        const radius = 100000; // Radio de búsqueda en metros
+
+        const params = new URLSearchParams({
+            ll: `${latitude},${longitude}`,
+            radius: radius,
+            v: '20220101', // Fecha actual en formato YYYYMMDD
+        });
+
+        const url = `${apiUrl}?${params}`;
+
+        fetch(url, options)
             .then(response => response.json())
             .then(response => {
+                loadingGif.style.display = "none";
                 console.log(response)
                 const places = response.results;
                 places.forEach(place => {
@@ -64,7 +79,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
 
             })
-            .catch(err => console.error(err));
+            .catch(err => {
+                console.error(err)
+                loadingGif.style.display = "none";
+            });
     }
 
     const agregarProductoForm = document.getElementById("agregarProductoForm");
