@@ -94,10 +94,12 @@
 
   .nav-links a {
     font-size: 14px;
+    
   }
 
   .mobile-menu {
-    display: flex;
-    align-self: flex-end;
+    display:flex;
+    align-self:flex-end;
   }
+  
 }

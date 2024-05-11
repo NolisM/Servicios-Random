@@ -1,7 +1,7 @@
 /* Estilos para el footer */
 footer {
     width: 100%;
-    background-color: #222;
+    background-color: #151a25;
     /* Color de fondo */
     color: #fff;
     /* Color del texto */
@@ -24,6 +24,7 @@ footer {
     justify-content: space-between;
 }
 
+
 .contact-info,
 .social-links,
 .copyright {
@@ -40,7 +41,7 @@ footer {
     /* Color del título */
     font-size: 20px;
     /* Tamaño del título */
-    margin-bottom: 10px;
+    margin-bottom: 1%;
     /* Espaciado inferior del título */
 }
 
@@ -51,8 +52,9 @@ footer {
     /* Color del texto */
     font-size: 16px;
     /* Tamaño del texto */
-    line-height: 1.6;
+    line-height: 1,6;
     /* Altura de línea */
+    
 }
 
 .social-links ul {
@@ -65,14 +67,14 @@ footer {
 .social-links ul li {
     display: inline-block;
     /* Mostrar los elementos de la lista en línea */
-    margin-right: 10px;
+    margin-right: 14px;
     /* Espaciado derecho entre elementos */
 }
 
 .social-links ul li a img {
-    width: 40px;
+    width: 10%;
     /* Ancho de las imágenes */
-    height: 40px;
+    height: 10%;
     /* Altura de las imágenes */
     border-radius: 50%;
     /* Forma circular */

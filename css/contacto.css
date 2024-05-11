@@ -12,7 +12,7 @@ body {
 }
 
 .contactpage {
-    background-color: #3369e7;
+    background-color:rgb(47, 95, 207) ;
     position: relative;
     background-size: cover;
     background-position: center;
@@ -35,7 +35,7 @@ body {
 .btn-submit {
     background-color: #050f2c;
     border-color: #050f2c;
-    border-radius: 5%;
+    border-radius: 2%;
     margin-top: 5%;
     color: white;
     padding: 20%;
@@ -63,7 +63,7 @@ body {
 
 h4,
 h2 {
-    color: #050f2c;
+    color: #1d2435;
     width: 75%;
     text-align: center;
 }
