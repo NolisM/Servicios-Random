@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const iframeContent = document.createElement('iframe')
         iframeContent.src = pagina
         iframeContent.allowFullscreen = true
-        console.log(iframeContent)
         mainContent.appendChild(iframeContent)
 
     }
