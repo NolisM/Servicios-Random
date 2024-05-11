@@ -9,11 +9,7 @@ body {
 }
 
 .contactpage {
-<<<<<<< HEAD
-    background-color:rgb(47, 95, 207) ;
-=======
     background-color: rgba(51, 105, 231, 0.7);
->>>>>>> f7be6484fb99a9d182cb25fd03e9ffef00d02291
     position: relative;
     background-size: cover;
     background-position: center;
@@ -63,14 +59,9 @@ body {
 
 h4,
 h2 {
-<<<<<<< HEAD
-    color: #1d2435;
-    width: 75%;
-=======
     color: #050f2c;
     width: 90%;
     max-width: 600px;
->>>>>>> f7be6484fb99a9d182cb25fd03e9ffef00d02291
     text-align: center;
 }
 
