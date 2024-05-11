@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const mainContent = document.getElementById('main-content');
     // Cargar contenido inicial
-
+    cargarContenido('./sitio/inicio.html')
 
     // Función para cargar contenido dinámicamente
     function cargarContenido(pagina) {
@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const iframeContent = document.createElement('iframe')
         iframeContent.src = pagina
         iframeContent.allowFullscreen = true
-        console.log(iframeContent)
         mainContent.appendChild(iframeContent)
 
     }
@@ -19,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const enlaceInicio = document.getElementById('enlace-inicio');
     enlaceInicio.addEventListener('click', function (event) {
         event.preventDefault();
-        cargarContenido('./index.html');
+        cargarContenido('./sitio/inicio.html');
     });
 
     // Detectar clic en el enlace "Destinos"

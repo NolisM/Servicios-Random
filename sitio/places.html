@@ -6,11 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/places.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Lugares donde ir</title>
 </head>
 
 <body>
     <main>
+
+        <section>
+            <div class="descripcion">
+
+                <h2 class="titleContainer">Explora nuevos lugares en Córdoba</h2>
+                <h3 class="subtitle">Descubre cafés acogedores, restaurantes deliciosos y teatros encantadores en la
+                    hermosa ciudad de Córdoba.</h3>
+            </div>
+            <container id='results-container' class="place">
+                <img id="loading-gif" src="../image/VZvw.gif" alt="Cargando..." style="display: none;" class="gift">
+            </container>
+        </section>
+        </section>
         <section>
             <section class="sectionButton">
                 <div id="formulario-overlay" class="overlay">
@@ -28,19 +42,16 @@
                                 alt="Cerrar formulario"></button>
                     </div>
                 </div>
-                <h2>Añadir un lugar</h2>
-                <button class="add-button" id="mostrarForm">Añadir</button>
+                <div class="añadir">
+                    <h2>Si tu posees un lugar para visitar lo puedes añadir!!!</h2>
+                    <button class="add-button" id="mostrarForm">Aqui!!</button>
+
+                </div>
 
             </section>
-            <section>
-                <h2 class="titleContainer">Lugares donde visitar</h2>
-                <container id='results-container' class="place"></container>
-            </section>
-        </section>
 
 
     </main>
-    <!-- <footer> <iframe src="../sitio/footer.html" frameborder="0" width="100%" height="25%"></iframe></footer> -->
     <footer>
         <div class="footer-content">
             <div class="contact-info">
