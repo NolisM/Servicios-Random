@@ -19,7 +19,7 @@ body {
     border-radius: 10px;
     border: 2px solid #3369e7;
     padding: 2%;
-    background-color: #050f2c;
+    background-color: rgba(5, 15, 44, 0.8);
     color: white;
     transition: transform 0.2s ease;
 }
@@ -28,22 +28,42 @@ body {
     transform: scale(1.05);
 }
 
-@media only screen and (max-width: 768px) {
-    .place {
-        grid-template-columns: repeat(2, 1fr);
-
-        padding: 15px;
-    }
+.descripcion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-@media only screen and (max-width: 480px) {
-    .place {
-        grid-template-columns: 1fr;
-
-        padding: 10px;
-    }
+h4,
+h2 {
+    color: #050f2c;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
 }
 
+#loading-gif {
+    width: 50%;
+    margin-left: 120%;
+}
+
+.añadir {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    margin-bottom: 2%;
+    background-color: rgba(5, 15, 44, 0.8);
+    border-radius: 2%;
+    padding: 2%;
+
+}
+
+.añadir h2 {
+    color: white;
+}
 
 .sectionButton {
     display: flex;
@@ -62,6 +82,7 @@ body {
     margin-left: 2%;
     padding-left: 2%;
     padding-right: 2%;
+    width: 20%;
 }
 
 .add-button:hover {
@@ -91,9 +112,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    /* Color de fondo semi-transparente */
     z-index: 1000;
-    /* Z-index alto para que esté por encima del contenido */
 }
 
 .formulario {
@@ -143,4 +162,30 @@ body {
 .buttonSubmit:hover {
     background-color: #0056b3;
 
+}
+
+@media only screen and (max-width: 768px) {
+    .place {
+        grid-template-columns: repeat(2, 1fr);
+
+        padding: 15px;
+    }
+
+    #loading-gif {
+        width: 50%;
+        margin-left: 80%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .place {
+        grid-template-columns: 1fr;
+
+        padding: 10px;
+    }
+
+    #loading-gif {
+        width: 50%;
+        margin-left: 20%;
+    }
 }
