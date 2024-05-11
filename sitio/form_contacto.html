@@ -22,33 +22,54 @@
         ¡Gracias por elegirnos como tu socio en tus viajes y aventuras!
     </h4>
 
-    <form class="contactpage">
+    <form class="contactpage" id="contactpage">
         <div class="item">
-            <label name='nombre' className='form-Label'>Nombre</label>
-            <input type='text' name='nombre' id='nombre' required />
+            <label for="consulta">Tipo de consulta:</label>
+            <select id="consulta" name="consulta">
+                <option value="consulta">Consulta general</option>
+                <option value="reserva">Reserva de viaje</option>
+                <option value="queja">Queja o reclamo</option>
+            </select>
+        </div>
+        <div id="datosIncompletos"></div>
+        <div class="item">
+            <label for='nombre'>Nombre</label>
+            <input type='text' name='nombre' id='nombre' />
+            <p id="nameError" class="error-message"></p>
         </div>
         <div class="item">
-            <label name='apellido' className='form-Label'>Apellido</label>
-            <input type='text' name='apellido' id='apellido' required />
+            <label for='apellido'>Apellido</label>
+            <input type='text' name='apellido' id='apellido' />
+            <p id="lastnameError" class="error-message"></p>
         </div>
         <div class="item">
-            <label name='email' className='form-Label'>E-mail</label>
-            <input type='email' name='email' id='email' required />
+            <label for='email'>E-mail</label>
+            <input type='email' name='email' id='email' />
+            <p id="email" class="error-message"></p>
         </div>
         <div class="item">
-            <label name='phone' className='form-Label'>Telefono</label>
+            <label for='phone'>Telefono</label>
             <input type='text' name="phone" id='phone' placeholder='+54(351)3899755' />
         </div>
         <div class="item">
-            <label name='mensaje' className='form-Label'>Mensaje</label>
-            <textarea class="textarea" name='mensaje' required></textarea>
+            <label for='mensaje'>Mensaje</label>
+            <textarea class="textarea" name='mensaje' id="mensaje"></textarea>
+            <p id="mensaje" class="error-message"></p>
         </div>
-        <div>
+        <div class="itemImage">
+            <label for="imagen">Adjuntar imagen:</label>
+            <input type="file" id="imagen" name="imagen">
+        </div>
+        <div class="item">
+            <label for="suscripcion">Suscribirse al boletín de noticias:</label>
+            <input type="checkbox" id="suscripcion" name="suscripcion">
+        </div>
+        <div id="enviar">
             <button type='submit' class="btn-submit">Enviar</button>
 
         </div>
     </form>
-
+    <script src="../js/contacto.js"></script>
     <footer>
         <div class="footer-content">
             <div class="contact-info">
@@ -70,7 +91,7 @@
         </div>
 
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </body>
 
 </html>
