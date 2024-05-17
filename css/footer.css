@@ -1,27 +1,22 @@
 /* Estilos para el footer */
 footer {
+   
     width: 100%;
     background-color: #151a25;
-    /* Color de fondo */
     color: #fff;
-    /* Color del texto */
-    /* padding: 50px 0; */
-    /* Espaciado interno */
-    text-align: center;
-    /* Alineación del texto */
+    padding: 2px ;
+    text-align:center ;
     font-family: 'Roboto', sans-serif;
-    /* Fuente de texto */
     margin: 0%;
+    
 }
 
 .footer-content {
     /* max-width: 1200px; */
-    /* Ancho máximo del contenido */
     /* margin: 0 auto; */
-    /* Centrar el contenido horizontalmente */
     display: flex;
-    /* flex-wrap: wrap; */
     justify-content: space-between;
+    
 }
 
 
@@ -30,71 +25,72 @@ footer {
 .copyright {
     flex: 1;
     text-align: left;
-    /* Alinear el texto a la izquierda */
-    padding: 0 20px;
-    /* Espaciado interno */
+    padding: 0 10px;
+    
 }
 
 .contact-info h3,
 .social-links h3 {
     color: #fff;
-    /* Color del título */
-    font-size: 20px;
-    /* Tamaño del título */
+    font-size: 16px;
     margin-bottom: 1%;
-    /* Espaciado inferior del título */
-}
+}   
 
 .contact-info p,
 .social-links ul,
 .copyright {
     color: #ccc;
-    /* Color del texto */
-    font-size: 16px;
-    /* Tamaño del texto */
-    line-height: 1,6;
-    /* Altura de línea */
+    font-size: 15px;
+    line-height: 1;
+}
+.copy {
     
+    font-size: 15px;
+    padding: 1%;
+   
 }
 
 .social-links ul {
     list-style: none;
-    /* Eliminar viñetas de la lista */
     padding: 0;
-    /* Eliminar el espacio interior de la lista */
+    
 }
 
 .social-links ul li {
     display: inline-block;
-    /* Mostrar los elementos de la lista en línea */
-    margin-right: 14px;
-    /* Espaciado derecho entre elementos */
+    margin-right: 10px; 
 }
 
 .social-links ul li a img {
     width: 10%;
-    /* Ancho de las imágenes */
     height: 10%;
-    /* Altura de las imágenes */
     border-radius: 50%;
-    /* Forma circular */
+   
 }
 
 /* Estilos para dispositivos móviles */
 @media screen and (max-width: 768px) {
+    footer {
+        width: 100%;
+        height: 10rem;
+        line-height: 0;
+    }
     .footer-content {
         flex-direction: column;
-        /* Cambiar a una columna en dispositivos móviles */
         align-items: center;
-        /* Centrar el contenido */
+        line-height: 0;
     }
 
     .contact-info,
     .social-links,
     .copyright {
         text-align: center;
-        /* Alinear el texto al centro en dispositivos móviles */
-        margin-bottom: 20px;
-        /* Espaciado inferior entre secciones */
+        margin-bottom: 0px;
+    
+       
     }
+    .copy {
+        padding: 0;
+    }
+    
 }
