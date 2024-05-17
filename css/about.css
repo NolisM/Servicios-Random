@@ -11,7 +11,7 @@ main {
 }
 
 section {
-    margin-bottom: 5%;
+    margin-bottom: 10%;
 }
 
 h2 {
@@ -26,12 +26,21 @@ h2 {
 #nuestra-mision,
 #nuestra-vision,
 #nuestro-equipo {
-    background-color:azure;
+    background-color:rgba(255, 255, 255, 0.6);
     padding: 2%;
-    color: #51515c;
-    font-size: 18px;
-    line-height: 1.5;
-    
+    color: #000000;
+    font-size: 20px;
+    line-height: 1;
+    margin-left: 3%;
+    margin-right: 3%;
+    border-radius:3%;
+}
+#quienes-somos,
+#nuestra-mision {
+    background-color:rgba(255, 255, 255, 0.3);
+}
+#nuestra-vision {
+    background-color:rgba(255, 255, 255, 0.4);
 }
 @media screen and (max-width: 768px) {
     body {
@@ -52,7 +61,7 @@ h2 {
     #nuestra-mision, 
     #nuestra-vision,
     #nuestro-equipo {
-        padding: 1%;
+        padding: 2%;
     }
    
     
