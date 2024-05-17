@@ -1,45 +1,60 @@
-/* Estilos para el contenido dentro del main */
+
 body {
     margin: 0%;
 }
 
 main {
-    padding: 50px 0;
+    padding: 5% 0;
+    background-image: url('../image/fondo2.jpg');
+    background-size: cover; /*  la imagen cubre todo el elemento */
+    background-position: center; /* centrar la imagen */
 }
 
 section {
-    margin-bottom: 2%;
+    margin-bottom: 5%;
 }
 
 h2 {
-    color: #333;
+    color: #101012;
     font-size: 28px;
-    margin-bottom: 20px;
+    margin-bottom: 2%;
 }
 
-p {
-    color: #666;
-    font-size: 16px;
-    line-height: 1.6;
-}
 
-/* Estilos específicos para cada sección */
-#quienes-somos {
-    background-color: #f9f9f9;
-    padding: 30px;
-}
 
-#nuestra-mision {
-    background-color: #eef3f6;
-    padding: 30px;
-}
-
-#nuestra-vision {
-    background-color: #f2f8f7;
-    padding: 30px;
-}
-
+#quienes-somos,
+#nuestra-mision,
+#nuestra-vision,
 #nuestro-equipo {
-    background-color: #f6f2ed;
-    padding: 30px;
+    background-color:azure;
+    padding: 2%;
+    color: #51515c;
+    font-size: 18px;
+    line-height: 1.5;
+    
 }
+@media screen and (max-width: 768px) {
+    body {
+        font-size: medium;
+    }
+    main {
+        padding: 5% 0;
+    }
+    section {
+        display: block;
+    }
+
+    h2 {
+       margin-bottom: 1%;
+    }
+
+    #quienes-somos, 
+    #nuestra-mision, 
+    #nuestra-vision,
+    #nuestro-equipo {
+        padding: 1%;
+    }
+   
+    
+}
+
