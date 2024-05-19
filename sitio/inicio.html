@@ -1,155 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/slider.css">
     <link rel="stylesheet" href="../css/footer.css">
     <title>Document</title>
-</head>
-<body>
-    <article>
-        <div class="slider-container">
-          <div class="slide fade">
-            <img class="slide-image" src="../image/slide01.jpg" alt="Yo amo Córdoba">
-            <div class="slide-content">
-              <h3 class="slide-title">Yo❤Cba</h3>
-              <p class="slide-desc">
-                Conoce Córdoba capital, Argentina.
-              </p>
-              <a href="" class="slide-btn">
-                Conocer más <ion-icon name="arrow-forward-circle"></ion-icon>
-              </a>
-            </div>
-            <div class="slide-number-container">
-              <p class="slider-number">01</p>
-              <hr>
-              <p class="slider-number">06</p>
-            </div>
+  </head>
+  <body>
+    <!-- slider -->
+    <div class="slider">
+      <!-- list items -->
+      <div class="list">
+        <div class="item active">
+          <img src="../image/slide01.jpg" alt="Yo amo Córdoba" class="src">
+          <div class="content">
+            <p>Yo❤Cba</p>
+            <h2>La capital</h2>
+            <p>
+              Córdoba capital, Argentina.
+            </p>
           </div>
-        
-          <div class="slide fade">
-            <img class="slide-image" src="../image/slide02.jpg" alt="El arroyo La Cañada">
-            <div class="slide-content">
-              <h3 class="slide-title">El corazón de Córdoba</h3>
-              <p class="slide-desc">
-                El arroyo La Cañada atravesando nuestra ciudad.
-              </p>
-              <a href="" class="slide-btn">
-                Conocer más <ion-icon name="arrow-forward-circle"></ion-icon>
-              </a>
-            </div>
-            <div class="slide-number-container">
-              <p class="slider-number">02</p>
-              <hr>
-              <p class="slider-number">06</p>
-            </div>
-          </div>
-        
-          <div class="slide fade">
-            <img class="slide-image" src="../image/slide03.jpg" alt="La Iglesia de los Capuchinos">
-            <div class="slide-content">
-              <h3 class="slide-title">Su Arquitectura e Historia</h3>
-              <p class="slide-desc">
-                La Iglesia de los Capuchinos.
-              </p>
-              <a href="" class="slide-btn">
-                Conocer más <ion-icon name="arrow-forward-circle"></ion-icon>
-              </a>
-            </div>
-            <div class="slide-number-container">
-              <p class="slider-number">03</p>
-              <hr>
-              <p class="slider-number">06</p>
-            </div>
-          </div>
-
-          <div class="slide fade">
-            <img class="slide-image" src="../image/slide04.jpg" alt="Las escalinatas en un día nevado">
-            <div class="slide-content">
-              <h3 class="slide-title">La ciudad y la nieve</h3>
-              <p class="slide-desc">
-                Las escalinatas en un día nevado.
-              </p>
-              <a href="" class="slide-btn">
-                Conocer más <ion-icon name="arrow-forward-circle"></ion-icon>
-              </a>
-            </div>
-            <div class="slide-number-container">
-              <p class="slider-number">04</p>
-              <hr>
-              <p class="slider-number">06</p>
-            </div>
-          </div>
-
-          <div class="slide fade">
-            <img class="slide-image" src="../image/slide05.jpg" alt="Nuestros paisajes">
-            <div class="slide-content">
-              <h3 class="slide-title">El interior de la provincia</h3>
-              <p class="slide-desc">
-                Lugar random ?
-              </p>
-              <a href="" class="slide-btn">
-                Conocer más <ion-icon name="arrow-forward-circle"></ion-icon>
-              </a>
-            </div>
-            <div class="slide-number-container">
-              <p class="slider-number">05</p>
-              <hr>
-              <p class="slider-number">06</p>
-            </div>
-          </div>
-
-          <div class="slide fade">
-            <img class="slide-image" src="../image/slide06.jpg" alt="Alta Gracia">
-            <div class="slide-content">
-              <h3 class="slide-title">Y mucho más...</h3>
-              <p class="slide-desc">
-                
-              </p>
-              <a href="" class="slide-btn">
-                Conocer más <ion-icon name="arrow-forward-circle"></ion-icon>
-              </a>
-            </div>
-            <div class="slide-number-container">
-              <p class="slider-number">06</p>
-              <hr>
-              <p class="slider-number">06</p>
-            </div>
-          </div>
-        
-          <!-- Next and previous buttons -->
-          <div class="slider-nav">
-            <a class="slider-nav-btn" onclick="plusSlides(-1)">
-              <ion-icon name="caret-back-outline"></ion-icon>
-            </a>
-            <a class="slider-nav-btn" onclick="plusSlides(1)">
-              <ion-icon name="caret-forward-outline"></ion-icon>
-            </a>
-          </div>
-        
-          <!-- The dots/circles -->
-          <!--
-          <div class="dot-container">
-            <a class="dot" onclick="currentSlide(1)">
-              <ion-icon name="ellipse"></ion-icon>
-            </a>
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-            <span class="dot" onclick="currentSlide(5)"></span>
-            <span class="dot" onclick="currentSlide(6)"></span>
-          </div>
-          -->
         </div>
-        
-        <noscript> You need to enable JavaScript to run this app. </noscript>
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-        <script src="../js/slider.js"></script>
+        <div class="item">
+          <img src="../image/slide02.jpg" alt="Yo amo Córdoba" class="src">
+          <div class="content">
+            <p>Yo❤Cba</p>
+            <h2>Los arroyos</h2>
+            <p>
+              El arroyo La Cañada atravesando nuestra ciudad.
+            </p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="../image/slide03.jpg" alt="Yo amo Córdoba" class="src">
+          <div class="content">
+            <p>Yo❤Cba</p>
+            <h2>La arquitectura</h2>
+            <p>
+              La Iglesia de los Capuchinos.
+            </p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="../image/slide04.jpg" alt="Yo amo Córdoba" class="src">
+          <div class="content">
+            <p>Yo❤Cba</p>
+            <h2>La nieve</h2>
+            <p>
+              Las escalinatas en un día nevado. 
+            </p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="../image/slide05.jpg" alt="Yo amo Córdoba" class="src">
+          <div class="content">
+            <p>Yo❤Cba</p>
+            <h2>El interior</h2>
+            <p>
+              Las sierras y los lagos.
+            </p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="../image/slide06.jpg" alt="Yo amo Córdoba" class="src">
+          <div class="content">
+            <p>Yo❤Cba</p>
+            <h2>Y mucho más...</h2>
+            <p>
+            </p>
+          </div>
+        </div>
+      </div>
 
-    </article>
+      <!-- button arrows -->
+      <div class="arrows">
+        <button id="prev">&lt;</button>
+        <button id="next">></button>
+      </div>
+      <!-- thumbnail -->
+      <div class="thumbnail">
+        <div class="item active">
+            <img src="../image/slide01.jpg" alt="Córdoba capital, Argentina.">
+            <div class="content">
+                01
+            </div>
+        </div>
+        <div class="item">
+            <img src="../image/slide02.jpg" alt="El arroyo La Cañada atravesando nuestra ciudad.">
+            <div class="content">
+                02
+            </div>
+        </div>
+        <div class="item">
+            <img src="../image/slide03.jpg" alt="La Iglesia de los Capuchinos.">
+            <div class="content">
+                03
+            </div>
+        </div>
+        <div class="item">
+            <img src="../image/slide04.jpg" alt="Las escalinatas en un día nevado. ">
+            <div class="content">
+                04
+            </div>
+        </div>
+        <div class="item">
+            <img src="../image/slide05.jpg" alt="Las sierras y los lagos.">
+            <div class="content">
+                05
+            </div>
+        </div>
+        <div class="item">
+          <img src="../image/slide06.jpg" alt="Y mucho más...">
+          <div class="content">
+              06
+          </div>
+      </div>
+      </div>
+    </div>
+
+    <script src="../js/slider.js"></script>
 
     <!-- <footer> <iframe src="../sitio/footer.html" frameborder="0" width="100%" height="25%"></iframe></footer> -->
     <footer>
@@ -173,5 +143,5 @@
         </div>
 
     </footer>
-</body>
+  </body>
 </html>

@@ -1,45 +1,53 @@
-let slideIndex = 1;
-const slides = document.getElementsByClassName("slide");
-const dots = document.getElementsByClassName("dot");
+let items = document.querySelectorAll('.slider .list .item');
+let next = document.getElementById('next');
+let prev = document.getElementById('prev');
+let thumbnails = document.querySelectorAll('.thumbnail .item');
 
-// Function to show a specific slide
-function showSlides(n) {
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
+// config param
+let countItem = items.length;
+let itemActive = 0;
+// event next click
+next.onclick = function(){
+    itemActive = itemActive + 1;
+    if(itemActive >= countItem){
+        itemActive = 0;
+    }
+    showSlider();
+}
+//event prev click
+prev.onclick = function(){
+    itemActive = itemActive - 1;
+    if(itemActive < 0){
+        itemActive = countItem - 1;
+    }
+    showSlider();
+}
+// auto run slider
+let refreshInterval = setInterval(() => {
+    next.click();
+}, 5000)
+function showSlider(){
+    // remove item active old
+    let itemActiveOld = document.querySelector('.slider .list .item.active');
+    let thumbnailActiveOld = document.querySelector('.thumbnail .item.active');
+    itemActiveOld.classList.remove('active');
+    thumbnailActiveOld.classList.remove('active');
 
-  // Hide all slides
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
+    // active new item
+    items[itemActive].classList.add('active');
+    thumbnails[itemActive].classList.add('active');
 
-  // Remove the "active" class from all dots
-  for (let i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-
-  // Display the current slide and mark its corresponding dot as active
-  slides[slideIndex - 1].style.display = "block";
-  // dots[slideIndex - 1].className += " active";
+    // clear auto time run slider
+    clearInterval(refreshInterval);
+    refreshInterval = setInterval(() => {
+        next.click();
+    }, 5000)
 }
 
-// Function to advance to the next slide
-function plusSlides(n) {
-  showSlides((slideIndex += n));
-}
-
-// Function to navigate to a specific slide
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
-
-// Automatically advance to the next slide every 3 seconds (3000 milliseconds)
-setInterval(function () {
-  plusSlides(1);
-}, 5000);
-
-// Initialize the slider
-showSlides(slideIndex);
+// click thumbnail
+thumbnails.forEach((thumbnail, index) => {
+    thumbnail.addEventListener('click', () => {
+        itemActive = index;
+        showSlider();
+    })
+})
