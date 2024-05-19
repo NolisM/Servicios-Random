@@ -1,8 +1,11 @@
 
 document.addEventListener("DOMContentLoaded", function () {
     const mainContent = document.getElementById('main-content');
-    // Cargar contenido inicial
+    const navLinks = document.querySelector('.nav-links');
+    const mobileMenuButton = document.querySelector('.mobile-menu');
 
+    // Cargar contenido inicial
+    cargarContenido('./sitio/inicio.html')
 
     // Función para cargar contenido dinámicamente
     function cargarContenido(pagina) {
@@ -10,10 +13,26 @@ document.addEventListener("DOMContentLoaded", function () {
         const iframeContent = document.createElement('iframe')
         iframeContent.src = pagina
         iframeContent.allowFullscreen = true
-        console.log(iframeContent)
         mainContent.appendChild(iframeContent)
 
     }
+
+    // Toggle menú móvil
+    mobileMenuButton.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        mobileMenuButton.classList.toggle('open');
+    });
+
+    // Detectar clic en los enlaces del menú
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            const targetPage = link.getAttribute('id').replace('enlace-', '');
+            cargarContenido(`./sitio/${targetPage}.html`);
+            navLinks.classList.remove('active');
+            mobileMenuButton.classList.remove('open');
+        });
+    });
 
     // Detectar clic en el enlace "Inicio"
     const enlaceInicio = document.getElementById('enlace-inicio');
@@ -35,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
         cargarContenido('./sitio/about.html');
     });
-
+    // Detectar clic en el enlace "contacto"
     const contacto = document.getElementById('contacto');
     contacto.addEventListener('click', function (event) {
         event.preventDefault();
