@@ -41,7 +41,7 @@ header .menu{
     height: 100vh;
     margin-top: -50px;
     position: relative;
-    block-size: 200vb; /* mejor visibilidad en el viewport */
+    block-size: 250vb; /* mejor visibilidad en el viewport */
 }
 .slider .list .item{
     position: absolute;
