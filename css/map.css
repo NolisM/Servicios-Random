@@ -1,0 +1,33 @@
+.grid {
+    display: flex;
+    align-items: stretch; 
+    justify-content: space-around;
+    padding-left: 10px;
+    background-color: #ffffff; /* background-color: #BBB4D6; */
+}
+
+img {
+    width: 75%;
+    height: auto;
+}
+
+.imgMap {
+    justify-content: space-between;
+}
+
+.map-regions { 
+    align-items: center; 
+    width: 100%; 
+    height: auto; 
+} 
+
+.map-text  { 
+    color: #777777;
+    width: 75%; 
+    height: auto; 
+    padding: 5px; 
+}
+
+.map-text h1 {
+    color: #050f2c;
+}
