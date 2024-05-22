@@ -1,9 +1,10 @@
-.grid {
+.container-map {
+    background-color: #ffffff; /* background-color: #BBB4D6; */
+    font-family: Poppins;
     display: flex;
     align-items: stretch; 
     justify-content: space-around;
     padding-left: 10px;
-    background-color: #ffffff; /* background-color: #BBB4D6; */
 }
 
 img {
@@ -17,13 +18,13 @@ img {
 
 .map-regions { 
     align-items: center; 
-    width: 100%; 
+    width: 45%; 
     height: auto; 
 } 
 
 .map-text  { 
     color: #777777;
-    width: 75%; 
+    width: 45%; 
     height: auto; 
     padding: 5px; 
 }
