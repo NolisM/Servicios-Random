@@ -2,31 +2,21 @@
     background-color: #ffffff; /* background-color: #BBB4D6; */
     font-family: Poppins;
     display: flex;
-    align-items: stretch; 
-    justify-content: space-around;
-    padding-left: 10px;
+    padding: 10px;
+    flex-wrap: wrap;
 }
 
-img {
-    width: 75%;
-    height: auto;
-}
-
-.imgMap {
-    justify-content: space-between;
-}
-
-.map-regions { 
+.map-regions {
+    padding: 40px;
     align-items: center; 
     width: 45%; 
     height: auto; 
 } 
 
-.map-text  { 
+.map-text  {
     color: #777777;
     width: 45%; 
     height: auto; 
-    padding: 5px; 
 }
 
 .map-text h1 {
