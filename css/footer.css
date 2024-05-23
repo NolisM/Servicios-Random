@@ -1,14 +1,14 @@
 /* Estilos para el footer */
 footer {
-   
+
     width: 100%;
-    background-color: #151a25;
+    background-color: #1c2436;
     color: #fff;
-    padding: 2px ;
-    text-align:center ;
+    padding: 2px;
+    text-align: center;
     font-family: 'Roboto', sans-serif;
     margin: 0%;
-    
+
 }
 
 .footer-content {
@@ -16,7 +16,7 @@ footer {
     /* margin: 0 auto; */
     display: flex;
     justify-content: space-between;
-    
+
 }
 
 
@@ -26,7 +26,7 @@ footer {
     flex: 1;
     text-align: left;
     padding: 0 10px;
-    
+
 }
 
 .contact-info h3,
@@ -34,7 +34,7 @@ footer {
     color: #fff;
     font-size: 16px;
     margin-bottom: 1%;
-}   
+}
 
 .contact-info p,
 .social-links ul,
@@ -43,29 +43,30 @@ footer {
     font-size: 15px;
     line-height: 1;
 }
+
 .copy {
-    
+
     font-size: 15px;
     padding: 1%;
-   
+
 }
 
 .social-links ul {
     list-style: none;
     padding: 0;
-    
+
 }
 
 .social-links ul li {
     display: inline-block;
-    margin-right: 10px; 
+    margin-right: 10px;
 }
 
 .social-links ul li a img {
     width: 10%;
     height: 10%;
     border-radius: 50%;
-   
+
 }
 
 /* Estilos para dispositivos móviles */
@@ -75,6 +76,7 @@ footer {
         height: 10rem;
         line-height: 0;
     }
+
     .footer-content {
         flex-direction: column;
         align-items: center;
@@ -86,11 +88,12 @@ footer {
     .copyright {
         text-align: center;
         margin-bottom: 0px;
-    
-       
+
+
     }
+
     .copy {
         padding: 0;
     }
-    
+
 }
