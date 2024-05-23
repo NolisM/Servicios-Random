@@ -170,3 +170,23 @@ body {
         top: 10%;
     }
 }
+
+.imgTravel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.imgTravel div {
+
+    margin: 1%;
+}
+
+.imgTravel div img div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
