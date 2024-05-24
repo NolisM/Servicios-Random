@@ -39,7 +39,7 @@ JavaScript (ES6)
 API de Foursquare
 
 # Autores
-Este proyecto fue desarrollado por Nolis Maldonado, Aylen y Andres . Si tienes alguna pregunta o sugerencia, no dudes en ponerte en contacto.
+Este proyecto fue desarrollado por Nolis Maldonado, Aylen Stutz y Andres Rojas . Si tienes alguna pregunta o sugerencia, no dudes en ponerte en contacto.
 
 # Licencia
 Este proyecto está bajo la licencia MIT. 
