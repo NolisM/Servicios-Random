@@ -1,8 +1,8 @@
-# Nombre de la Pagina
+# Tourfy
 Este proyecto es una página web interactiva diseñada para promover lugares turísticos en Córdoba, Argentina. La página destaca destinos populares y ofrece promociones para fomentar el turismo. Además, consume la API de Foursquare, configurada específicamente para mostrar lugares turísticos de Córdoba.
 
 # Descripción del Proyecto
-NOMBREEE es una plataforma web cuyo objetivo principal es promover el turismo en la ciudad de Córdoba, Argentina. El sitio proporciona información detallada sobre diversos puntos de interés turístico, incluyendo descripciones, imágenes y promociones especiales para visitantes. Además, la página está integrada con la API de Foursquare, que se utiliza para obtener datos actualizados sobre lugares turísticos específicos de Córdoba.
+Tourfy es una plataforma web cuyo objetivo principal es promover el turismo en la ciudad de Córdoba, Argentina. El sitio proporciona información detallada sobre diversos puntos de interés turístico, incluyendo descripciones, imágenes y promociones especiales para visitantes. Además, la página está integrada con la API de Foursquare, que se utiliza para obtener datos actualizados sobre lugares turísticos específicos de Córdoba.
 
 Los visitantes de la página pueden explorar diferentes secciones que muestran lugares recomendados, obtener información sobre promociones vigentes y ponerse en contacto con nosotros para obtener más detalles o hacer consultas. La interfaz está diseñada para ser intuitiva y fácil de usar, proporcionando una experiencia de usuario agradable y eficiente.
 
