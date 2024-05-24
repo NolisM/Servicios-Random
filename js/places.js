@@ -40,15 +40,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function fetchPlaces() {
         const loadingGif = document.getElementById("loading-gif");
-        loadingGif.style.display = "block"; // Muestra el GIF de carga
-        const latitude = -31.4167; // Latitud de Córdoba, Argentina
-        const longitude = -64.1833; // Longitud de Córdoba, Argentina
-        const radius = 100000; // Radio de búsqueda en metros
+        loadingGif.style.display = "block";
+        const latitude = -31.4167;
+        const longitude = -64.1833;
+        const radius = 100000;
 
         const params = new URLSearchParams({
             ll: `${latitude},${longitude}`,
             radius: radius,
-            v: '20220101', // Fecha actual en formato YYYYMMDD
+            v: '20220101',
         });
 
         const url = `${apiUrl}?${params}`;
@@ -57,7 +57,6 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(response => response.json())
             .then(response => {
                 loadingGif.style.display = "none";
-                console.log(response)
                 const places = response.results;
                 places.forEach(place => {
                     const placeDiv = document.createElement('div');
@@ -88,11 +87,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const agregarProductoForm = document.getElementById("agregarProductoForm");
     agregarProductoForm.addEventListener("submit", function (event) {
         event.preventDefault();
-        // Obtener datos del formulario
+
         const nameService = document.getElementById("nameService").value;
         const adressService = document.getElementById("adressService").value;
 
-        // Mostrar los datos del formulario en el contenedor de resultados
+
         const serviceDiv = document.createElement('div');
         serviceDiv.classList.add('element');
 
@@ -106,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
         serviceDiv.appendChild(adressServiceElement);
         resultsContainer.appendChild(serviceDiv);
 
-        // Limpiar los campos del formulario
+
         document.getElementById("nameService").value = "";
         document.getElementById("adressService").value = "";
 
