@@ -6,8 +6,8 @@ body {
 main {
     padding: 5% 0;
     background-image: url('../image/fondo2.jpg');
-    background-size: cover; /*  la imagen cubre todo el elemento */
-    background-position: center; /* centrar la imagen */
+    background-size: cover; 
+    background-position: center; 
 }
 
 section {
