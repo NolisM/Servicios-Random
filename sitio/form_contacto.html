@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/contacto.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <h2>¡Nos encantaría saber de ti!</h2>
+
+    <h4>
+        ¿Tienes alguna pregunta sobre nuestros destinos turísticos, servicios o paquetes de viaje? ¿Necesitas ayuda para
+        planificar tu próxima aventura? ¡No dudes en ponerte en contacto con nosotros!<br />
+
+        Completa el formulario a continuación y nos pondremos en contacto contigo lo antes posible. Tu opinión es
+        importante para nosotros y estamos aquí para ayudarte a hacer realidad tus sueños de viaje.<br />
+
+        ¡Gracias por elegirnos como tu socio en tus viajes y aventuras!
+    </h4>
+
+    <form class="contactpage" id="contactpage">
+        <div class="item">
+            <label for="consulta">Tipo de consulta:</label>
+            <select id="consulta" name="consulta">
+                <option value="consulta">Consulta general</option>
+                <option value="reserva">Reserva de viaje</option>
+                <option value="queja">Queja o reclamo</option>
+            </select>
+        </div>
+        <div id="datosIncompletos"></div>
+        <div class="item">
+            <label for='nombre'>Nombre</label>
+            <input type='text' name='nombre' id='nombre' />
+            <p id="nameError" class="error-message"></p>
+        </div>
+        <div class="item">
+            <label for='apellido'>Apellido</label>
+            <input type='text' name='apellido' id='apellido' />
+            <p id="lastnameError" class="error-message"></p>
+        </div>
+        <div class="item">
+            <label for='email'>E-mail</label>
+            <input type='email' name='email' id='email' />
+            <p id="email" class="error-message"></p>
+        </div>
+        <div class="item">
+            <label for='phone'>Telefono</label>
+            <input type='text' name="phone" id='phone' placeholder='+54(351)3899755' />
+        </div>
+        <div class="item">
+            <label for='mensaje'>Mensaje</label>
+            <textarea class="textarea" name='mensaje' id="mensaje"></textarea>
+            <p id="mensaje" class="error-message"></p>
+        </div>
+        <div class="itemImage">
+            <label for="imagen">Adjuntar imagen:</label>
+            <input type="file" id="imagen" name="imagen">
+        </div>
+        <div class="item">
+            <label for="suscripcion">Suscribirse al boletín de noticias:</label>
+            <input type="checkbox" id="suscripcion" name="suscripcion">
+        </div>
+        <div id="enviar">
+            <button type='submit' class="btn-submit">Enviar</button>
+
+        </div>
+    </form>
+    <script src="../js/contacto.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</body>
+
+</html>

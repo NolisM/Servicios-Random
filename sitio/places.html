@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/places.css">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Lugares donde ir</title>
+</head>
+
+<body>
+    <main>
+
+        <section>
+            <div class="descripcion">
+
+                <h2 class="titleContainer">Explora nuevos lugares en Córdoba</h2>
+                <h3 class="subtitle">Descubre cafés acogedores, restaurantes deliciosos y teatros encantadores en la
+                    hermosa ciudad de Córdoba.</h3>
+            </div>
+            <container id='results-container' class="place">
+                <img id="loading-gif" src="../image/VZvw.gif" alt="Cargando..." style="display: none;" class="gift">
+            </container>
+        </section>
+        </section>
+        <section>
+            <section class="sectionButton">
+                <div id="formulario-overlay" class="overlay">
+                    <div id="formulario" class="formulario">
+                        <h2>Agrega tu sitio</h2>
+                        <form id="agregarProductoForm" class="formElements">
+                            <label for="nameService">Nombre del Lugar:</label>
+                            <input type="text" id="nameService" name="nameService">
+                            <label for="adressService">Direccion:</label>
+                            <input type="text" id="adressService" name="adressService">
+                            <button type="submit" class="buttonSubmit">Agregar</button>
+                        </form>
+
+                        <button id="cerrarFormulario" class="closeButton"><img src="./close.png"
+                                alt="Cerrar formulario"></button>
+                    </div>
+                </div>
+                <div class="añadir">
+                    <h2>Si tu posees un lugar para visitar lo puedes añadir!!!</h2>
+                    <button class="add-button" id="mostrarForm">Aqui!!</button>
+
+                </div>
+
+            </section>
+
+
+    </main>
+   
+    <script src="../js/places.js"></script>
+</body>
+
+</html>

@@ -1,11 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Probando cambios</title>
+    <title>Mi Página de Inicio</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </head>
+
 <body>
-    <p><b>Como se cargan cambios</b></p>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="./image/logo.jpg" alt="Logo de la empresa">
+            </div>
+            <ul class="nav-links">
+                <li><a id="enlace-inicio" href="#">Inicio</a></li>
+                <li><a id="enlace-destinos" href="#">Destinos</a></li>
+                <li><a id="enlace-sobre-nosotros" href="#">Sobre Nosotros</a></li>
+                <li><a id="contacto" href="#">Contacto</a></li>
+
+
+            </ul>
+            <button class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Contenido de tu página -->
+    <main id="main-content" class="main-content">
+
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contacto</h3>
+                <p><strong>Email:</strong> tourfly@gmail.com</p>
+                <p><strong>Dirección:</strong> Calle,Córdoba,Argentina</p>
+            </div>
+            <div class="social-links">
+                <h3>Síguenos</h3>
+                <ul class="social-links">
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+            <p class="copy">&copy; 2024 Tourfy. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="./js/index.js"></script>
 </body>
+
 </html>
