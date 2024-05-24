@@ -20,7 +20,6 @@ const validarForm = () => {
     errores.forEach(error => error.innerHTML = '');
 
     if (!nombre || !apellido || !email || !mensaje) {
-        console.log('entro por undefined')
         const datosIncompletos = document.getElementById('datosIncompletos')
         datosIncompletos.innerHTML = 'Debe completar todos los campos'
 
