@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const mobileMenuButton = document.querySelector('.mobile-menu');
 
 
-    cargarContenido('./sitio/inicio.html')
+    cargarContenido('./sitio/inicio.html', "inicio")
 
 
     function cargarContenido(pagina, seccion) {
