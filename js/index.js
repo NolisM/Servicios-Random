@@ -8,12 +8,13 @@ document.addEventListener("DOMContentLoaded", function () {
     cargarContenido('./sitio/inicio.html')
 
 
-    function cargarContenido(pagina) {
+    function cargarContenido(pagina, seccion) {
         mainContent.innerHTML = '';
         const iframeContent = document.createElement('iframe')
         iframeContent.src = pagina
         iframeContent.allowFullscreen = true
         mainContent.appendChild(iframeContent)
+        window.location.hash = seccion;
 
     }
 
@@ -28,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
         link.addEventListener('click', function (event) {
             event.preventDefault();
             const targetPage = link.getAttribute('id').replace('enlace-', '');
-            cargarContenido(`./sitio/${targetPage}.html`);
+            cargarContenido(`./sitio/${targetPage}.html`, targetPage);
             navLinks.classList.remove('active');
             mobileMenuButton.classList.remove('open');
         });
@@ -38,27 +39,27 @@ document.addEventListener("DOMContentLoaded", function () {
     const enlaceInicio = document.getElementById('enlace-inicio');
     enlaceInicio.addEventListener('click', function (event) {
         event.preventDefault();
-        cargarContenido('./sitio/inicio.html');
+        cargarContenido('./sitio/inicio.html', "inicio");
     });
 
 
     const enlaceDestinos = document.getElementById('enlace-destinos');
     enlaceDestinos.addEventListener('click', function (event) {
         event.preventDefault();
-        cargarContenido('./sitio/places.html');
+        cargarContenido('./sitio/places.html', "destinos");
     });
 
 
     const enlaceSobreNosotros = document.getElementById('enlace-sobre-nosotros');
     enlaceSobreNosotros.addEventListener('click', function (event) {
         event.preventDefault();
-        cargarContenido('./sitio/about.html');
+        cargarContenido('./sitio/about.html', "sobreNosotros");
     });
 
     const contacto = document.getElementById('contacto');
     contacto.addEventListener('click', function (event) {
         event.preventDefault();
-        cargarContenido('./sitio/form_contacto.html');
+        cargarContenido('./sitio/form_contacto.html', "Contacto");
     });
 
 });
