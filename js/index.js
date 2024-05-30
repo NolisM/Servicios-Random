@@ -8,6 +8,33 @@ document.addEventListener("DOMContentLoaded", function () {
     cargarContenido('./sitio/inicio.html', "inicio")
 
 
+    function Navegacion(hash) {
+        let pagina;
+        switch (hash) {
+            case '#inicio':
+                pagina = './sitio/inicio.html';
+                break;
+            case '#destinos':
+                pagina = './sitio/places.html';
+                break;
+            case '#sobre-nosotros':
+                pagina = './sitio/about.html';
+                break;
+            case '#contacto':
+                pagina = './sitio/form_contacto.html';
+                break;
+            default:
+                pagina = './sitio/inicio.html';
+                break;
+        }
+        cargarContenido(pagina, hash);
+    }
+
+    window.addEventListener('hashchange', () => {
+        Navegacion(window.location.hash);
+    });
+
+
     function cargarContenido(pagina, seccion) {
         mainContent.innerHTML = '';
         const iframeContent = document.createElement('iframe')
@@ -53,13 +80,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const enlaceSobreNosotros = document.getElementById('enlace-sobre-nosotros');
     enlaceSobreNosotros.addEventListener('click', function (event) {
         event.preventDefault();
-        cargarContenido('./sitio/about.html', "sobreNosotros");
+        cargarContenido('./sitio/about.html', "sobre-nosotros");
     });
 
     const contacto = document.getElementById('contacto');
     contacto.addEventListener('click', function (event) {
         event.preventDefault();
-        cargarContenido('./sitio/form_contacto.html', "Contacto");
+        cargarContenido('./sitio/form_contacto.html', "contacto");
     });
 
 });
