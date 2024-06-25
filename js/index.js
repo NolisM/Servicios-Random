@@ -23,6 +23,9 @@ document.addEventListener("DOMContentLoaded", function () {
             case '#contacto':
                 pagina = './sitio/form_contacto.html';
                 break;
+            case '#admin':
+                pagina = './sitio/admin.html';
+                break;
             default:
                 pagina = './sitio/inicio.html';
                 break;
@@ -88,5 +91,16 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
         cargarContenido('./sitio/form_contacto.html', "contacto");
     });
+
+    // Enlace para la administración
+    document.getElementById('enlace-admin').addEventListener('click', function (event) {
+        event.preventDefault();
+        cargarContenido('./sitio/admin.html', "admin");
+    });
+
+    // Cargar la página de administración si el hash es #admin
+    if (window.location.hash === '#admin') {
+        cargarContenido('./sitio/admin.html', "admin");
+    }
 
 });

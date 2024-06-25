@@ -1,0 +1,52 @@
+/* styles.css */
+
+/* Estilo general para la tabla */
+body {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    font-family: 'Arial', sans-serif;
+    text-align: left;
+}
+
+/* Estilo para las celdas del encabezado */
+thead tr {
+    background-color: #0a1b27;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Estilo para las filas del cuerpo de la tabla */
+tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+tbody tr:last-of-type {
+    border-bottom: 2px solid #0a1b27;
+}
+
+/* Estilo para las celdas */
+td,
+th {
+    padding: 12px 15px;
+}
+
+/* Estilo para resaltar las filas al pasar el cursor */
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+h1 {
+    text-align: center;
+}
