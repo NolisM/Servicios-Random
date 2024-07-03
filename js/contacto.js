@@ -12,6 +12,9 @@ const validarForm = () => {
     const apellido = document.getElementById('apellido').value.trim();
     const email = document.getElementById('email').value.trim();
     const mensaje = document.getElementById('mensaje').value.trim();
+    const consulta = document.getElementById('consulta').value;
+    const telefono = document.getElementById('phone').value;
+    const suscripcion = document.getElementById('suscripcion').checked;
     const nombreRegex = /^[a-zA-ZáéíóúÁÉÍÓÚ\s]+$/;
     const apellidoRegex = /^[a-zA-ZáéíóúÁÉÍÓÚ\s]+$/;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -36,12 +39,41 @@ const validarForm = () => {
         const MensajeContent = document.getElementById('email');
         MensajeContent.innerHTML = 'Ingrese una dirección de correo electrónico válida.';
     } else {
-        Swal.fire({
-            title: '¡Mensaje enviado!',
-            icon: 'success',
-            confirmButtonText: 'Aceptar'
-        });
-        limpiarDatos()
+        const data = { // modificar segun necesitemos en la tabla
+            nombre: nombre,
+            apellido: apellido,
+            email: email,
+            telefono: telefono,
+            mensaje: mensaje,
+            tipo: consulta,
+            estado: true
+        };
+
+        fetch('http://127.0.0.1:5000/api/consultas', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(response => response.json())
+            .then(data => {
+                Swal.fire({
+                    title: '¡Mensaje enviado!',
+                    icon: 'success',
+                    confirmButtonText: 'Aceptar'
+                });
+                limpiarDatos();
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                Swal.fire({
+                    title: 'Error',
+                    text: 'Hubo un problema al enviar el mensaje.',
+                    icon: 'error',
+                    confirmButtonText: 'Aceptar'
+                });
+            });
     }
 
 

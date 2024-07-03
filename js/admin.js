@@ -1,139 +1,95 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const consultas = [
-        {
-            consulta: "consulta general",
-            nombre: "Juan",
-            apellido: "Pérez",
-            email: "juan.perez@example.com",
-            phone: "+54(351)3899755",
-            mensaje: "Me gustaría saber más sobre sus paquetes de viaje.",
-            suscripcion: true
-        },
-        {
-            consulta: "reserva",
-            nombre: "María",
-            apellido: "Gómez",
-            email: "maria.gomez@example.com",
-            phone: "+54(351)3899766",
-            mensaje: "Quiero reservar un viaje a Córdoba.",
-            suscripcion: false
-        },
-        {
-            consulta: "queja",
-            nombre: "Carlos",
-            apellido: "López",
-            email: "carlos.lopez@example.com",
-            phone: "+54(351)3899777",
-            mensaje: "Tengo una queja sobre el servicio.",
-            suscripcion: true
-        }
-    ];
+  fetch('http://127.0.0.1:5000/api/consultas')// url al get de consultas
+    .then(response => response.json())
+    .then(data => {
+      const tbody = document.getElementById('consultasTable').getElementsByTagName('tbody')[0];
+      console.log('data', data)
+      data.forEach(consulta => {
+        let row = tbody.insertRow();
 
-    const tbody = document.getElementById('consultasTable').getElementsByTagName('tbody')[0];
-    const main = document.querySelector('main');
+        let cellConsulta = row.insertCell(0);
+        let cellNombre = row.insertCell(1);
+        let cellApellido = row.insertCell(2);
+        let cellEmail = row.insertCell(3);
+        let cellPhone = row.insertCell(4);
+        let cellMensaje = row.insertCell(5);
+        let cellSuscripcion = row.insertCell(6);
+        let cellAcciones = row.insertCell(7);
 
-    function mostrarMensajeNoConsultas() {
-        const mensaje = document.createElement('p');
-        mensaje.id = 'noConsultas';
-        mensaje.textContent = 'No hay consultas que mostrar.';
-        main.appendChild(mensaje);
-    }
+        cellConsulta.textContent = consulta.consulta;
+        cellNombre.textContent = consulta.nombre;
+        cellApellido.textContent = consulta.apellido;
+        cellEmail.textContent = consulta.email;
+        cellPhone.textContent = consulta.telefono;
+        cellMensaje.textContent = consulta.mensaje;
+        cellSuscripcion.textContent = consulta.suscripcion ? 'Sí' : 'No';
 
-    function cargarConsultas() {
-        consultas.forEach((consulta, index) => {
-            let row = tbody.insertRow();
+        let deleteIcon = document.createElement('i');
+        deleteIcon.className = 'fa fa-trash';
+        deleteIcon.style.cursor = 'pointer';
+        deleteIcon.onclick = function () {
+          Swal.fire({
+            title: '¿Estás seguro?',
+            text: "No podrás revertir esto!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#0a1b27',
+            cancelButtonColor: '#0a1b27',
+            confirmButtonText: 'Sí, eliminarlo!'
+          }).then((result) => {
+            if (result.isConfirmed) {
+              const data = {
+                id: consulta.id,
+                nombre: consulta.nombre,
+                apellido: consulta.apellido,
+                email: consulta.email,
+                telefono: consulta.telefono,
+                mensaje: consulta.mensaje,
+                tipo: consulta.tipo,
+                estado: 0
+              };
+              fetch(`http://127.0.0.1:5000/api/consultas`, {// aca va url para eliminar manda id
+                method: 'DELETE',
+                headers: {
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+              })
+                .then(response => {
+                  if (response.ok) {
+                    tbody.removeChild(row);
+                    Swal.fire(
+                      'Eliminado!',
+                      'La consulta ha sido eliminada.',
+                      'success'
+                    )
 
-            let cellConsulta = row.insertCell(0);
-            let cellNombre = row.insertCell(1);
-            let cellApellido = row.insertCell(2);
-            let cellEmail = row.insertCell(3);
-            let cellPhone = row.insertCell(4);
-            let cellMensaje = row.insertCell(5);
-            let cellSuscripcion = row.insertCell(6);
-            let cellAcciones = row.insertCell(7);
 
-            cellConsulta.textContent = consulta.consulta;
-            cellNombre.textContent = consulta.nombre;
-            cellApellido.textContent = consulta.apellido;
-            cellEmail.textContent = consulta.email;
-            cellPhone.textContent = consulta.phone;
-            cellMensaje.textContent = consulta.mensaje;
-            cellSuscripcion.textContent = consulta.suscripcion ? 'Sí' : 'No';
-
-            let deleteIcon = document.createElement('i');
-            deleteIcon.classList.add('fa', 'fa-trash', 'delete-icon');
-            deleteIcon.setAttribute('data-index', index);
-            deleteIcon.addEventListener('click', function () {
-                Swal.fire({
-                    title: '¿Estás seguro?',
-                    text: "No podrás revertir esta acción",
-                    icon: 'warning',
-                    showCancelButton: true,
-                    confirmButtonColor: '#0a1b27',
-                    cancelButtonColor: '#0a1b27',
-                    confirmButtonText: 'Sí, eliminarlo',
-                    cancelButtonText: 'Cancelar'
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        tbody.deleteRow(row.rowIndex - 1);
-                        Swal.fire(
-                            'Eliminado!',
-                            'La consulta ha sido eliminada.',
-                            'success'
-                        );
-
-                        if (tbody.rows.length === 0) {
-                            mostrarMensajeNoConsultas();
-                        }
-                    }
+                  } else {
+                    console.error('Error al eliminar la consulta');
+                    Swal.fire(
+                      'Error!',
+                      'Hubo un problema al eliminar la consulta.',
+                      'error'
+                    )
+                  }
+                })
+                .catch(error => {
+                  console.error('Error al eliminar la consulta:', error);
+                  Swal.fire(
+                    'Error!',
+                    'Hubo un problema al eliminar la consulta.',
+                    'error'
+                  )
                 });
-            });
+            }
+          });
+        };
 
-            cellAcciones.appendChild(deleteIcon);
-        });
-
-        if (tbody.rows.length === 0) {
-            mostrarMensajeNoConsultas();
-        }
-    }
-
-    cargarConsultas();
-
-
+        cellAcciones.appendChild(deleteIcon);
+      });
+    })
+    .catch(error => {
+      console.error('Error al obtener las consultas:', error);
+    });
 });
-
-
-// document.addEventListener('DOMContentLoaded', function () {
-//     // Hacer la solicitud al backend
-//     fetch('../js/adminData')
-//         .then(response => response.json())
-//         .then(data => {
-//             console.log('aca data ', data)
-//             // Obtén la referencia al cuerpo de la tabla
-//             const tbody = document.getElementById('consultasTable').getElementsByTagName('tbody')[0];
-
-//             // Itera sobre las consultas y crea una fila para cada una
-//             data.forEach(consulta => {
-//                 let row = tbody.insertRow();
-
-//                 let cellConsulta = row.insertCell(0);
-//                 let cellNombre = row.insertCell(1);
-//                 let cellApellido = row.insertCell(2);
-//                 let cellEmail = row.insertCell(3);
-//                 let cellPhone = row.insertCell(4);
-//                 let cellMensaje = row.insertCell(5);
-//                 let cellSuscripcion = row.insertCell(6);
-
-//                 cellConsulta.textContent = consulta.consulta;
-//                 cellNombre.textContent = consulta.nombre;
-//                 cellApellido.textContent = consulta.apellido;
-//                 cellEmail.textContent = consulta.email;
-//                 cellPhone.textContent = consulta.phone;
-//                 cellMensaje.textContent = consulta.mensaje;
-//                 cellSuscripcion.textContent = consulta.suscripcion ? 'Sí' : 'No';
-//             });
-//         })
-//         .catch(error => {
-//             console.error('Error al obtener las consultas:', error);
-//         });
-// });
