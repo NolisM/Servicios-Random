@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  fetch('http://127.0.0.1:5000/api/consultas')// url al get de consultas
+  fetch('https://andresrojas.pythonanywhere.com/api/consultas')// url al get de consultas
     .then(response => response.json())
     .then(data => {
       const tbody = document.getElementById('consultasTable').getElementsByTagName('tbody')[0];
@@ -45,10 +45,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 email: consulta.email,
                 telefono: consulta.telefono,
                 mensaje: consulta.mensaje,
-                tipo: consulta.tipo,
+                tipo: consulta.tipo,// agregasr suscripcion
                 estado: 0
               };
-              fetch(`http://127.0.0.1:5000/api/consultas`, {// aca va url para eliminar manda id
+              fetch(`https://andresrojas.pythonanywhere.com/api/consultas`, {// aca va url para eliminar manda id
                 method: 'DELETE',
                 headers: {
                   'Content-Type': 'application/json'

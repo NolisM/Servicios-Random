@@ -46,10 +46,13 @@ const validarForm = () => {
             telefono: telefono,
             mensaje: mensaje,
             tipo: consulta,
-            estado: true
+            estado: 1,
+            suscripcion: suscripcion ? 1 : 0
         };
 
-        fetch('http://127.0.0.1:5000/api/consultas', {
+        console.log(data)
+
+        fetch('https://andresrojas.pythonanywhere.com/api/consultas', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
