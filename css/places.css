@@ -43,6 +43,11 @@ h2 {
     text-align: center;
 }
 
+.image {
+    width: 10%;
+
+}
+
 #loading-gif {
     width: 50%;
     margin-left: 120%;

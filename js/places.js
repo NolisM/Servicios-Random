@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(response => {
                 console.log('aca', response)
                 loadingGif.style.display = "none";
+                resultsContainer.innerHTML = '';
                 const places = response;
                 places.forEach(place => {
                     const placeDiv = document.createElement('div');
@@ -52,10 +53,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     addressElement.textContent = place.ubicacion;
 
                     const iconElement = document.createElement('img');
+                    iconElement.classList.add('image');
                     if (place.imagen) {
                         iconElement.src = place.imagen;
                     } else {
-                        iconElement.src = 'default-icon.png'; // URL de un ícono por defecto en caso de que no haya categorías
+                        iconElement.src = "../image/defaul-icon.png";
                     }
 
                     placeDiv.appendChild(nameElement);
@@ -100,15 +102,14 @@ document.addEventListener("DOMContentLoaded", function () {
             })
             .then(newPlace => {
                 loadingGif.style.display = "none";
-                renderPlace(newPlace); // Mostrar el nuevo lugar agregado
                 formularioOverlay.style.display = "none";
-                Swal.fire({
-                    icon: 'success',
-                    title: '¡Lugar cargado con éxito!',
-                    showConfirmButton: false,
-                    timer: 1500 // Duración en milisegundos
-                });
                 fetchPlaces()
+                Swal.fire({
+                    title: '¡Lugar cargado con exito!',
+                    icon: 'success',
+                    confirmButtonText: 'Aceptar'
+                });
+
             })
             .catch(err => {
                 console.error('Error adding place:', err);
@@ -120,9 +121,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 loadingGif.style.display = "none";
             });
 
-        fetchPlaces()
+
         document.getElementById("nameService").value = "";
         document.getElementById("adressService").value = "";
+        document.getElementById("imageService").value = "";
 
         formularioOverlay.style.display = "none";
     });
