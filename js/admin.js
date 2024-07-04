@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let cellSuscripcion = row.insertCell(6);
         let cellAcciones = row.insertCell(7);
 
-        cellConsulta.textContent = consulta.consulta;
+        cellConsulta.textContent = consulta.tipo;
         cellNombre.textContent = consulta.nombre;
         cellApellido.textContent = consulta.apellido;
         cellEmail.textContent = consulta.email;
